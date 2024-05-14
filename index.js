@@ -8,8 +8,7 @@ app.use(express.json());
 
 require("./config/database").connect();
 
-
-const user = require("./routes/user");
+const user = require("./routes/User");
 app.use("/api/v1" , user);
 
 app.listen(PORT , () => {

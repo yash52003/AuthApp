@@ -10,7 +10,7 @@ exports.signup = async (req , res) => {
         //get the data
         const {name , email , password , role} = req.body;
         //Check if the entry already present (User already exists) If any entry is found then throw that entry on the first call
-        const existingUser = await user.findOne({email});
+        const existingUser = await User.findOne({email});
 
         if(existingUser){
             //If a valid entry is present 
